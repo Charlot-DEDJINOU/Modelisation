@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>60</y><w>210</w><h>80</h></coordinates><panel_attributes>Utilisateur
+--
+-nom: String                    
+-role: String  
+--
++consulterPlanning(): void  
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>240</y><w>210</w><h>100</h></coordinates><panel_attributes>Enseignant
+--
+-responsable: boolean
+--
++consulterRecapitulatif(): void
++effectuerReservation(): void 
+ +editerRecapitulatif(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>130</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>60</y><w>210</w><h>110</h></coordinates><panel_attributes>Salle
+--
+-numero: int                    
+-capacite: int
+--
++consulterPlanning(): void         
++reserver(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>90</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=-
+m1= *
+m2= *</panel_attributes><additional_attributes>10;10;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>210</y><w>210</w><h>110</h></coordinates><panel_attributes> MaterielPédagogique
+--
+-type: String 
+--
++consulterPlanning(): void         
++reserver(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>270</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=-
+m1= *
+m2= *</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element></diagram>
