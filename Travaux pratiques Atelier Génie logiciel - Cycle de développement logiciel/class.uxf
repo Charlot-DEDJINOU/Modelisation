@@ -1,31 +1,57 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>60</y><w>210</w><h>80</h></coordinates><panel_attributes>Utilisateur
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>30</x><y>50</y><w>210</w><h>110</h></coordinates><panel_attributes>Utilisateur
 --
--nom: String                    
--role: String  
+-nom: String
+-email: String
+-password: String                  
+-role: String
 --
 +consulterPlanning(): void  
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>240</y><w>210</w><h>100</h></coordinates><panel_attributes>Enseignant
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>220</y><w>210</w><h>100</h></coordinates><panel_attributes>Enseignant
 --
 -responsable: boolean
 --
 +consulterRecapitulatif(): void
 +effectuerReservation(): void 
  +editerRecapitulatif(): void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>130</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>60</y><w>210</w><h>110</h></coordinates><panel_attributes>Salle
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>230</y><w>210</w><h>110</h></coordinates><panel_attributes>Salle
 --
--numero: int                    
+-designation: String                  
 -capacite: int
 --
 +consulterPlanning(): void         
 +reserver(): void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>90</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=-
-m1= *
-m2= *</panel_attributes><additional_attributes>10;10;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>210</y><w>210</w><h>110</h></coordinates><panel_attributes> MaterielPédagogique
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>430</y><w>210</w><h>110</h></coordinates><panel_attributes> MaterielPédagogique
 --
--type: String 
+-Designation: String 
 --
 +consulterPlanning(): void         
 +reserver(): void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>270</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=-
-m1= *
-m2= *</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>420</y><w>210</w><h>130</h></coordinates><panel_attributes>Reservation
+--
+-dateDebut: Date
+-dateFin: Date
+-type: String
+-designation: String
+-id_enseignant: int
+--
++consluterReservation() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>50</y><w>210</w><h>80</h></coordinates><panel_attributes>Planification
+--
+-id_salle: int
+--
++planifierCours() : void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>150</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>60</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+consulter</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>310</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+reserver</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>120</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+contenir</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>490</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes><additional_attributes>10;10;210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>280</y><w>230</w><h>200</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes><additional_attributes>10;180;210;10</additional_attributes></element></diagram>
